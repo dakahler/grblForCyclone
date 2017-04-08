@@ -269,12 +269,13 @@
   // http://reprap.org/wiki/Cyclone_PCB_Factory
   #define MICROSTEPS 16 // 16 --> all three jumpers installed
   #define STEPS_PER_REV 200.0
-  #define MM_PER_REV 1.25 // 1.25 mm/rev leadscrew
+  #define MM_PER_REV_XY 8 // 8 mm/rev leadscrew
+  #define MM_PER_REV_Z 1.25 // 1.25 mm/rev leadscrew
   #define Cyclone_XY_Gear_Ratio 21.0/21.0 // Number of gear teeth (motor/rod)
   #define Cyclone_Z_Gear_Ratio 8.0/15.0 // Number of gear teeth (motor/rod)
-  #define DEFAULT_X_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_XY_Gear_Ratio*MM_PER_REV))
-  #define DEFAULT_Y_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_XY_Gear_Ratio*MM_PER_REV))
-  #define DEFAULT_Z_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_Z_Gear_Ratio*MM_PER_REV))
+  #define DEFAULT_X_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_XY_Gear_Ratio*MM_PER_REV_XY))
+  #define DEFAULT_Y_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_XY_Gear_Ratio*MM_PER_REV_XY))
+  #define DEFAULT_Z_STEPS_PER_MM (STEPS_PER_REV*MICROSTEPS/(Cyclone_Z_Gear_Ratio*MM_PER_REV_Z))
   #define DEFAULT_X_MAX_RATE 5*60.0 // mm/min
   #define DEFAULT_Y_MAX_RATE 5*60.0 // mm/min
   #define DEFAULT_Z_MAX_RATE 2.5*60.0 // mm/min
